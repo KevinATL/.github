@@ -1,0 +1,5 @@
+{
+    "name": "Auto approve workflow",
+    "description": "Auto approve PR's.",
+    "iconName": "example-icon"
+}

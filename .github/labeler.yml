@@ -1,0 +1,27 @@
+---
+CI/CD:
+  - fastlane/**/*
+  - travis.yml
+  - Dangerfile
+  - .circleci/**/*
+  - .ruby-version
+  - .swift-version
+  - Makefile
+  - .codeclimate.yml
+dependencies:
+  - Carthage/**/*
+  - Cartfile.private
+  - Cartfile
+  - Pods/*
+  - Podfile
+  - Podfile.lock
+  - Romefile
+  - .gitmodules
+  - Brewfile
+documentation:
+  - README.md
+  - doc/**/*
+  - Documentation/**/*
+  - jazzy.yml
+  - CHANGELOG.md
+  - README.md

@@ -1,0 +1,23 @@
+---
+name: Issue cleanup
+on:
+  schedule:
+    # At 23:00, 14th day of each month
+    - cron: '0 23 14 * *'
+jobs:
+  triage_issues:
+    name: Issue triage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find old issues and mark them stale
+        uses: Krizzu/issue-triage-action@v1.0.0
+        with:
+          ghToken: ${{ secrets.GITHUB_TOKEN }}
+          staleAfter: 3
+          closeAfter: 10
+          staleLabel: "STALE 📺"
+          staleComment: >
+            "This issue is %DAYS_OLD% days old, marking as stale!
+            cc: @%AUTHOR%"
+          closeComment: "Issue last updated %DAYS_OLD% days ago! Closing down!"
+          showLogs: true
